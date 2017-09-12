@@ -11,11 +11,11 @@ public class CellCoordinateTuple {
 	}
 	
 	public boolean equals(Object other) {
-		if (other == null || !(other instanceof CellCoordinateTuple)) {
-			return false;
-		} else {
+		if (other instanceof CellCoordinateTuple) {
 			return ((CellCoordinateTuple) other).x == this.x && ((CellCoordinateTuple) other).y == this.y;
 		}
+		
+		return false;
 	}
 	
 	public int hashCode() {
